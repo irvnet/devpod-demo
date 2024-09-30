@@ -42,3 +42,14 @@ sudo mv ./devpod /usr/local/bin/devpod
 
 ```
 
+
+### Install the docker provider
+The docker provider allows for provisioning a local docker container for development. Probably the simplest option for simple projects or roughing out something locally or perhaps writing a blog post. If you're adding a docker provider, that assumes Docker is installed and running properly. Using the Kubernetes provider assumes that a cluster is available and running for DevPod to reference.
+
+```
+{
+devpod provider add docker
+}
+```
+
+
