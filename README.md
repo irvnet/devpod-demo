@@ -1,4 +1,4 @@
-# Exploring DevPod for Container-Based Development Environments
+## Exploring DevPod for Container-Based Development Environments
 
 ## Introduction
 
@@ -6,3 +6,6 @@ So I'm poking around looking for some options for creating container based dev e
 
 ## Why Reproducible Environments Matter
 
+What I've found is that having reproducible environments isn't just about consistency... it’s about minimizing friction, to spend time iterating on ideas, issues or whatever the task at hand instead of building and managing environments. Till now I've mostly used Terraform to provision infrastructure and AWS (and occassionally GCP) to simplify access to resources. From an enterprise perspective I see how customers I've worked with are challenged with things like getting a new developer or SRE's to move across projects or work through different dependencies at different parts of their tech stack. 
+
+Containerized development environments offers a few pretty helpful things: 
