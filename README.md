@@ -1,4 +1,4 @@
-# devpod-demo
+# Exploring DevPod for Container-Based Development Environments
 
 ## Introduction
 
