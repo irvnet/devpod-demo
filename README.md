@@ -22,3 +22,23 @@ While Gitpod and other solutions have made cloud-based  environments popular, it
 5. **Simple Configuration Management**: Supports GitOps-style workflows, making it easy to declare and replicate environments using version-controlled files.
 
 
+## Installation and Configuration
+
+DevPod can be installed locally (which will get you running pretty quickly). I tried it on a mac and on an ec2 images, both were pretty easy to get running.
+
+### Prerequisites
+- Docker integration: Docker, git
+- Kubernetes integration: a pre-existing k8s cluster (kind in this example), kubectl, helm, git
+
+
+
+### DevPod client installation
+```
+{
+curl -L -o devpod "https://github.com/loft-sh/devpod/releases/latest/download/devpod-darwin-amd64" 
+chmod +x ./devpod
+sudo mv ./devpod /usr/local/bin/devpod
+}
+
+```
+
