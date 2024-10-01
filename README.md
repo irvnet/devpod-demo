@@ -52,4 +52,36 @@ devpod provider add docker
 }
 ```
 
+### Create a workspace
+A workspace is essentially a dev container that allows for local development in a curated environment. The UI is dead simple making it easy to create an environment with a few clicks. As far as I can tell, most everything maps back to a backing cli which is great if that's where you feel most comfortable, or just need some extra flexibility creating workspaces. I particularly like that since I'll switch back and forth between vscode and vim depending on what I need to do.
+
+```
+{
+
+### create a direcotry for the workspace
+mkdir -p ~/projects/devpod-local
+
+### create a sample flask app
+cat << EOF | tee ~/sample.py 
+from flask import Flask, request, jsonify
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello from Python!"
+
+@app.route("/isAlive")
+def isAlive():
+    return {'isAlive': True}
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
+EOF
+
+### provision a dev container as a "workspace" from the local directory with the python app available for editing in vscode
+devpod up /Users/rirving/projects/devpod-local --id devlocal --provider docker --ide openvscode
+}
+```
+
+
 
